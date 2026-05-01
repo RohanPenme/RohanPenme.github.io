@@ -3,13 +3,11 @@
 
 /* ── Variables ── */
 :root {
-  --bg: #f7f5f0;
-  --surface: #ffffff;
-  --navy: #0f1f38;
-  --accent: #c84b31;
-  --text: #1a1a1a;
-  --muted: #6b6b6b;
-  --border: #e0ddd8;
+  --bg: #ffffff;
+  --surface: #f8fafc;
+  --navy: #0f172a;
+  --accent: #2563eb;
+  --border: #e2e8f0;
   --max-width: 780px;
 }
 
