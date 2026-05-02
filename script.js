@@ -53,3 +53,12 @@ document.querySelectorAll('.course-card').forEach(card => {
     }
   });
 });
+
+// Dark mode toggle
+// Switches between light and dark theme by toggling a class on the body
+const toggle = document.getElementById('theme-toggle');
+toggle.addEventListener('click', () => {
+  document.body.classList.toggle('dark');
+  // Update button icon based on current mode
+  toggle.textContent = document.body.classList.contains('dark') ? '☀️' : '🌙';
+});

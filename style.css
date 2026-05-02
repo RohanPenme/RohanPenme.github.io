@@ -273,3 +273,29 @@ section {
 .course-card {
   cursor: pointer;
 }
+
+/* Dark mode toggle button */
+#theme-toggle {
+  margin-left: auto;
+  background: none;
+  border: 1px solid rgba(255,255,255,0.3);
+  color: white;
+  padding: 4px 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.2s;
+}
+
+#theme-toggle:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+/* Dark mode styles */
+body.dark {
+  --bg: #0f172a;
+  --surface: #1e293b;
+  --text: #e2e8f0;
+  --muted: #94a3b8;
+  --border: #334155;
+}
