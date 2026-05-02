@@ -33,23 +33,23 @@ fetch("https://api.github.com/users/RohanPenme/repos?sort=updated&per_page=6")
     console.error("Error fetching repos:", error);
   });
 
-  // Add click interaction to course cards
-// Shows a description when a card is clicked, hides it when clicked again
+// Add click interaction to course cards
+// Shows a description below the card when clicked, hides it when clicked again
 document.querySelectorAll('.course-card').forEach(card => {
   card.addEventListener('click', () => {
     const desc = card.getAttribute('data-desc');
 
-    // Check if description is already showing
-    let existing = card.querySelector('.course-desc');
-    if (existing) {
+    // Check if description already exists after this card
+    let existing = card.nextElementSibling;
+    if (existing && existing.classList.contains('course-desc')) {
       // Hide it if already visible
       existing.remove();
     } else {
-      // Create and show the description
+      // Create and insert description after the card
       const p = document.createElement('p');
       p.className = 'course-desc';
       p.textContent = desc;
-      card.appendChild(p);
+      card.parentNode.insertBefore(p, card.nextSibling);
     }
   });
 });

@@ -262,8 +262,12 @@ section {
 .course-desc {
   font-size: 13px;
   color: var(--muted);
-  margin-top: 0.5rem;
   line-height: 1.5;
+  grid-column: 1 / -1;
+  padding: 0.75rem 1rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
 }
 
 .course-card {
