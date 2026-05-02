@@ -257,3 +257,15 @@ section {
   letter-spacing: 0.05em;
   white-space: nowrap;
 }
+
+/* Course card description on click */
+.course-desc {
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 0.5rem;
+  line-height: 1.5;
+}
+
+.course-card {
+  cursor: pointer;
+}

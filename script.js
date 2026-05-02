@@ -32,3 +32,24 @@ fetch("https://api.github.com/users/RohanPenme/repos?sort=updated&per_page=6")
     // Show an error message if the API call fails
     console.error("Error fetching repos:", error);
   });
+
+  // Add click interaction to course cards
+// Shows a description when a card is clicked, hides it when clicked again
+document.querySelectorAll('.course-card').forEach(card => {
+  card.addEventListener('click', () => {
+    const desc = card.getAttribute('data-desc');
+
+    // Check if description is already showing
+    let existing = card.querySelector('.course-desc');
+    if (existing) {
+      // Hide it if already visible
+      existing.remove();
+    } else {
+      // Create and show the description
+      const p = document.createElement('p');
+      p.className = 'course-desc';
+      p.textContent = desc;
+      card.appendChild(p);
+    }
+  });
+});
